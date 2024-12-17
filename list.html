@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>待辦清單</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>待辦清單</h1>
+    <input type="text" id="todoInput" placeholder="輸入待辦事項">
+    <button id="addTodo">新增</button>
+    <ul id="todoList"></ul>
+
+    <script>
+        $(document).ready(function() {
+            $("#addTodo").click(function() {
+                let todoText = $("#todoInput").val().trim();
+                if (todoText !== "") {
+                    let newTodo = $("<li></li>").text(todoText);
+                    let deleteButton = $("<button></button>").text("刪除").click(function() {
+                        $(this).parent().remove();
+                    });
+                    newTodo.append(deleteButton);
+                    $("#todoList").append(newTodo);
+                    $("#todoInput").val(""); // 清空輸入欄位
+                }
+            });
+        });
+    </script>
+</body>
+</html>
