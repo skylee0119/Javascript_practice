@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>點按鈕換圖片</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>點按鈕換圖片</h1>
+    <img id="image" src="images/校長.jpg" alt="校長" width="300">
+    <br>
+    <button id="changeImage">換圖片</button>
+
+    <script>
+        $(document).ready(function() {
+            let isPrincipal = true;
+            
+            $("#changeImage").click(function() {
+                if (isPrincipal) {
+                    $("#image").attr("src", "images/書曼.jpg").attr("alt", "書曼");
+                } else {
+                    $("#image").attr("src", "images/校長.jpg").attr("alt", "校長");
+                }
+                isPrincipal = !isPrincipal;
+            });
+        });
+    </script>
+</body>
+</html>
