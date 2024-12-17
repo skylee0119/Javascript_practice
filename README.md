@@ -34,3 +34,22 @@ HTTP 請求與 AJAX
 ## Week4
 
 建立自主學習專案，發佈至 Github
+
+# 11 月 15 日 ~ 12 月 20 日
+
+## Week1
+
+JavaScript 網頁操作(BOM、DOM)
+
+## Week2
+
+JavaScript 網頁操作(事件、obsever、時鐘)
+
+## Week3
+
+jQuery練習(DOM、編寫動畫效果)
+
+## Week4
+
+jQuery練習(DOM操作和動畫、CSS 3D)
+
