@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>健康天地標籤面板</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>健康天地</h1>
+    <button class="tab" data-target="#tab1">選項1</button>
+    <button class="tab" data-target="#tab2">選項2</button>
+    <button class="tab" data-target="#tab3">選項3</button>
+
+    <div id="tab1" class="content" style="display:none;">這是選項1的內容</div>
+    <div id="tab2" class="content" style="display:none;">這是選項2的內容</div>
+    <div id="tab3" class="content" style="display:none;">這是選項3的內容</div>
+
+    <script>
+        $(document).ready(function() {
+            $(".tab").click(function() {
+                $(".content").hide(); // 隱藏所有內容區域
+                var target = $(this).data("target");
+                $(target).show(); // 顯示對應的內容區域
+            });
+        });
+    </script>
+</body>
+</html>
